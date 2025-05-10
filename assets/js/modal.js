@@ -34,6 +34,14 @@ modalContents.forEach((content) => {
   });
 });
 
+overlay.addEventListener("click", () => {
+  // すべて閉じる
+  modalContents.forEach((content) => {
+    content.classList.remove("is-active");
+  });
+  modal.classList.remove("is-show");
+});
+
 let closeBtns = modal.querySelectorAll(".btn-close-modal");
 
 closeBtns.forEach((btn) => {

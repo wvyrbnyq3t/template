@@ -1,5 +1,5 @@
 #modal {
-  display: none;
+  visibility: hidden;
   height: 100dvh;
   width: 100dvw;
   overflow: hidden;
@@ -9,7 +9,7 @@
   z-index: 100;
 
   &.is-show {
-    display: block;
+    visibility: visible !important;
   }
 
   .overlay {
@@ -23,29 +23,43 @@
     z-index: 100;
   }
 
+  .modal-content {
+    background-color: #ffffff;
+    display: grid;
+    gap: 1.6rem;
+    overflow: hidden auto;
+    position: absolute;
+    visibility: hidden;
+
+    &.is-active {
+      visibility: visible !important;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .modal-content-footer {
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+    }
+  }
+
   .modal-center {
     .modal-content {
       background-color: #ffffff;
       border-radius: 1.6rem;
-      display: none;
-      gap: 1.6rem;
       height: fit-content;
       width: min(calc(100dvw - 3.2rem), calc(var(--w-pc) - 3.2rem));
       max-height: calc(100dvh - 6.4rem);
-      overflow: hidden auto;
       padding: 1.6rem;
-      position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 101;
-
-      &.is-active {
-        display: grid;
-      }
-      &::-webkit-scrollbar {
-        display: none;
-      }
 
       .modal-content-header {
         display: grid;
@@ -55,12 +69,32 @@
         display: grid;
         gap: 0.8rem;
       }
-      .modal-content-footer {
-        position: sticky;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        z-index: 10;
+    }
+  }
+  .modal-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: min(100dvw, var(--w-pc));
+    z-index: 101;
+
+    .modal-content {
+      border-top-right-radius: 1.6rem;
+      border-top-left-radius: 1.6rem;
+      height: fit-content;
+      width: min(100dvw, var(--w-pc));
+      max-height: calc(100dvh - 3.2rem);
+      padding: 1.6rem 1.6rem calc(1.6rem + env(safe-area-inset-bottom));
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 100%);
+      transition: all 0.4s;
+      width: min(100dvw, var(--w-pc));
+      z-index: 101;
+
+      &.is-active {
+        transform: translate(-50%, 0) !important;
       }
     }
   }
