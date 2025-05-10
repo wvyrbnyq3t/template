@@ -143,12 +143,9 @@ body {
 .btn-close {
   border-radius: 99rem;
   display: block !important;
-  margin-left: auto;
-  height: 3.2rem;
-  width: 3.2rem;
-  position: absolute;
-  top: 0;
-  right: 0;
+  height: 4.8rem;
+  width: 4.8rem;
+  position: relative;
   transition: background-color 0.4s;
 
   &:not([aria-disabled="true"]) {
@@ -159,9 +156,9 @@ body {
 
   &::before {
     content: "\e5cd";
-    font-size: 2.4rem;
-    height: 2.4rem;
-    width: 2.4rem;
+    font-size: 3.2rem;
+    height: 3.2rem;
+    width: 3.2rem;
     transform: translate(-50%, -50%) !important;
     top: 50% !important;
     left: 50% !important;
@@ -174,6 +171,9 @@ body {
       color: var(--c-gray) !important;
     }
   }
+}
+.btn-close-right {
+  margin-left: auto !important;
 }
 .btn-close-white {
   &:not([aria-disabled="true"]) {
@@ -203,6 +203,15 @@ body {
       font-size: 1.6rem;
       font-weight: 700;
     }
+  }
+
+  .btn-close {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+  }
+  .btn-close-right {
+    right: 0 !important;
   }
 }
 
