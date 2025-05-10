@@ -243,6 +243,18 @@ body {
   }
 }
 
+/* flexBox */
+.flexbox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+
+  > *{
+    flex-shrink: 0;
+  }
+}
+
 /* list style */
 .list-banner {
   .list-banner-item {
