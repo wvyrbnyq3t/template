@@ -142,14 +142,19 @@ body {
 
 .btn-close {
   border-radius: 99rem;
-  display: inline-block;
+  display: block !important;
+  margin-left: auto;
   height: 3.2rem;
   width: 3.2rem;
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
   transition: background-color 0.4s;
 
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+  &:not([aria-disabled="true"]) {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
   }
 
   &::before {
@@ -162,6 +167,24 @@ body {
     left: 50% !important;
     right: 50% !important;
   }
+
+  &[aria-disabled="true"] {
+    cursor: not-allowed;
+    &::before {
+      color: var(--c-gray) !important;
+    }
+  }
+}
+.btn-close-white {
+  &:not([aria-disabled="true"]) {
+    &:hover {
+      background-color: rgba(256, 256, 256, 0.1);
+    }
+  }
+
+  &::before {
+    color: #ffffff !important;
+  }
 }
 
 /* card */
@@ -169,6 +192,7 @@ body {
   border-radius: 0.4rem;
   box-shadow: 0 0 0.1rem #333333;
   overflow: hidden;
+  position: relative;
 
   .card-txt {
     display: grid;
