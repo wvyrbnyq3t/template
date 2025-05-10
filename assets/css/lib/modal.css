@@ -1,0 +1,46 @@
+#modal {
+  height: 100dvh;
+  width: 100dvw;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100dvh;
+    width: 100dvw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  .modal-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    width: min(100dvw, var(--w-pc));
+    overflow: hidden;
+    z-index: 101;
+
+    .modal-content {
+      background-color: #ffffff;
+      border-radius: 1.6rem;
+      max-height: calc(100dvh - 3.2rem);
+      overflow: hidden auto;
+      padding: 1.6rem;
+      position: relative;
+      width: min(calc(100dvw - 3.2rem), calc(var(--w-pc) - 3.2rem));
+      z-index: 101;
+
+      .btn-close-modal {
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}

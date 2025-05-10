@@ -1,0 +1,19 @@
+input {
+  border: 0.1rem solid var(--c-gray);
+  border-radius: 0.4rem;
+  padding: 0.75em;
+
+  &:focus {
+    outline-color: var(--c-primary);
+  }
+}
+
+select {
+  border: 0.1rem solid var(--c-gray);
+  border-radius: 0.4rem;
+  padding: 0.75em;
+
+  &:focus {
+    outline-color: var(--c-primary);
+  }
+}
