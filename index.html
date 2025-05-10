@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/root.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/lib/upsell.css">
+    <link rel="stylesheet" href="./assets/css/lib/modal.css" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0"
@@ -27,36 +27,30 @@
     />
   </head>
   <body>
-    <div id="upsell">
-      <div class="upsell-content is-active">
-        <button type="button" class="btn-icn btn-close btn-close-right"></button>
-        <div class="upsell-content-body">
-          <p class="title">通行規制について</p>
+    <div id="modal">
+      <div class="overlay"></div>
+      <div class="modal-center">
+        <div class="modal-content">
+          <div class="modal-content-header">
+            <p class="fs-large fw-bold">新ナイトタイムエンターテイメント「Reach for the Stars」がついにスタート！</p>
+            <p class="badge badge-secondary badge-small">東京ディズニーランド</p>
+          </div>
+          <div class="modal-content-body">
+            <img src="https://media2.tokyodisneyresort.jp/home/tdr/pickup/202405/newnightshow_2.jpg" alt="">
+            <p>
+              シンデレラ城を舞台にさまざまなキャラクターたちが夢を追い求めて空を翔ける姿を描くキャッスルプロジェクション。
+            </p>
+          </div>
+          <div class="modal-content-footer">
+            <button type="button" class="btn-secondary w-100">閉じる</button>
+          </div>
         </div>
       </div>
     </div>
     <div class="page">
       <div class="page-content">
-        <main>
-          <section>
-            <h2 class="sec-title">パークチケット</h2>
-            <div class="card">
-              <div class="card-img">
-                <img src="https://plan.tokyodisneyresort.jp/on/demandware.static/Sites-CRS-Site/-/default/dwa0185fea/images/img_user_widget.png" alt="">
-              </div>
-              <div class="card-txt">
-                <p class="title">東京ディズニーランド</p>
-                <div class="flexbox">
-                  <p class="badge badge-secondary badge-small">ニックネーム</p>
-                  <p class="badge badge-secondary badge-small">大人</p>
-                  <p class="badge badge-secondary badge-small">2025/5/22</p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
       </div>
     </div>
-    <script src="./assets/js/upsell.js" defer></script>
+    <script src="./assets/js/modal.js" defer></script>
   </body>
 </html>

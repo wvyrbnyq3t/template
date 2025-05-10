@@ -112,7 +112,7 @@ body {
 }
 
 .btn-small {
-  padding: .5em 1em;
+  padding: 0.5em 1em;
 }
 
 .btn-icn {
@@ -250,7 +250,7 @@ body {
   flex-wrap: wrap;
   gap: 0.4rem 0.8rem;
 
-  > *{
+  > * {
     flex-shrink: 0;
   }
 }
@@ -343,13 +343,13 @@ body {
 /* switch */
 .switch-wrap {
   .switch-header {
-    border: .1rem solid var(--c-primary);
+    border: 0.1rem solid var(--c-primary);
     border-radius: 99rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.4rem;
     margin: 0 auto;
-    padding: .4rem;
+    padding: 0.4rem;
     width: fit-content;
 
     .switch-btn {
@@ -378,11 +378,11 @@ body {
     position: sticky;
     top: 0;
     left: 0;
-    
+
     .switching-tab-btn {
-      border-bottom: .3rem solid var(--c-gray);
+      border-bottom: 0.3rem solid var(--c-gray);
       color: var(--c-gray);
-      padding-bottom: .4rem;
+      padding-bottom: 0.4rem;
       text-align: center;
       width: 100%;
 
@@ -395,6 +395,25 @@ body {
 }
 
 /* text style */
+.fs-huge {
+  font-size: 3.2rem;
+}
+.fs-xlarge {
+  font-size: 2.4rem;
+}
+.fs-large {
+  font-size: 2rem;
+}
+.fs-medium {
+  font-size: 1.6rem;
+}
+.fs-small {
+  font-size: 1.2rem;
+}
+.fs-xsmall {
+  font-size: 1rem;
+}
+
 .fw-bold {
   font-weight: 700;
 }

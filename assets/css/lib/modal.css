@@ -8,38 +8,51 @@
   z-index: 100;
 
   .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--bgc-overlay);
     height: 100dvh;
     width: 100dvw;
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 100;
   }
-  .modal-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100dvh;
-    width: min(100dvw, var(--w-pc));
-    overflow: hidden;
-    z-index: 101;
 
+  .modal-center {
     .modal-content {
       background-color: #ffffff;
       border-radius: 1.6rem;
-      max-height: calc(100dvh - 3.2rem);
+      display: grid;
+      gap: 1.6rem;
+      height: fit-content;
+      width: min(calc(100dvw - 3.2rem), calc(var(--w-pc) - 3.2rem));
+      max-height: calc(100dvh - 6.4rem);
       overflow: hidden auto;
       padding: 1.6rem;
-      position: relative;
-      width: min(calc(100dvw - 3.2rem), calc(var(--w-pc) - 3.2rem));
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       z-index: 101;
 
-      .btn-close-modal {
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .modal-content-header {
+        display: grid;
+        gap: 0.8rem;
+      }
+      .modal-content-body {
+        display: grid;
+        gap: 0.8rem;
+      }
+      .modal-content-footer {
         position: sticky;
         bottom: 0;
         left: 0;
         width: 100%;
+        z-index: 10;
       }
     }
   }
