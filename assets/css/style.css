@@ -66,9 +66,15 @@ body {
   width: fit-content;
 }
 
+.badge-secondary {
+  background-color: #ffffff !important;
+  border: 0.1rem solid var(--c-primary) !important;
+  color: var(--c-primary) !important;
+}
+
 .badge-small {
   font-size: 1.2rem;
-  padding: .25em 2em;
+  padding: 0.25em 2em;
 }
 
 /* button style */
@@ -102,6 +108,35 @@ body {
     border-color: var(--c-gray);
     color: var(--c-gray);
     cursor: not-allowed;
+  }
+}
+
+.btn-icn {
+  padding-right: 2em;
+  position: relative;
+
+  &::before {
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1em;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translate(-50%, -50%);
+  }
+}
+.btn-icn-arrow-right {
+  &::before {
+    content: "\e5e1";
   }
 }
 
