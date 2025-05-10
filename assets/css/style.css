@@ -7,7 +7,7 @@ html {
 body {
   color: var(--c-txt);
   font-family: "Noto Sans", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 500;
   letter-spacing: 0.05rem;
   line-height: 1.5;
@@ -18,16 +18,15 @@ body {
 }
 
 .page {
-  background-color: #ffffff;
-  box-shadow: 0 0 0.1rem #333333;
-  height: 100%;
-  width: min(100dvw, var(--w-pc));
-  margin: 0 auto;
-  min-height: 100dvh;
-  position: relative;
-  z-index: 0;
-
   .page-content {
+    background-color: #ffffff;
+    box-shadow: 0 0 0.1rem #333333;
+    height: 100%;
+    width: min(100dvw, var(--w-pc));
+    margin: 0 auto;
+    min-height: 100dvh;
+    position: relative;
+    z-index: 0;
     main {
       padding: 1.6rem;
 
@@ -73,9 +72,7 @@ body {
   border-radius: 0.4rem;
   color: #ffffff;
   display: inline-block;
-  font-size: 1.2rem;
-  font-weight: 500;
-  padding: 1.2em 1em;
+  padding: 1em;
   position: relative;
   text-align: center;
   width: fit-content;
@@ -91,9 +88,7 @@ body {
   border-radius: 0.4rem;
   color: var(--c-primary);
   display: inline-block;
-  font-size: 1.2rem;
-  font-weight: 500;
-  padding: 1.2em 1em;
+  padding: 1em;
   position: relative;
   text-align: center;
   width: fit-content;
