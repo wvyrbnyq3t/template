@@ -200,7 +200,7 @@ body {
 
   .card-txt {
     display: grid;
-    gap: 0.4rem;
+    gap: 0.8rem;
     padding: 1.6rem;
 
     .title {
@@ -325,6 +325,60 @@ body {
     display: block;
     height: 100%;
     width: 100%;
+  }
+}
+
+/* switch */
+.switch-wrap {
+  .switch-header {
+    border: .1rem solid var(--c-primary);
+    border-radius: 99rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+    margin: 0 auto;
+    padding: .4rem;
+    width: fit-content;
+
+    .switch-btn {
+      border-radius: 99rem;
+      display: block;
+      padding: 0.5em 2em;
+      text-align: center;
+
+      &.is-current {
+        background-color: var(--c-primary) !important;
+        color: #ffffff !important;
+      }
+    }
+  }
+}
+
+/* switchingTab */
+.switching-tab-wrap {
+  height: 100%;
+  position: relative;
+
+  .switching-tab-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+    .switching-tab-btn {
+      border-bottom: .3rem solid var(--c-gray);
+      color: var(--c-gray);
+      padding-bottom: .4rem;
+      text-align: center;
+      width: 100%;
+
+      &.is-current {
+        border-color: var(--c-primary) !important;
+        color: var(--c-primary) !important;
+      }
+    }
   }
 }
 

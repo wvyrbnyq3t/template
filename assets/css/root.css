@@ -1,7 +1,10 @@
 :root {
   --c-gray: #cccccc;
+  --c-green: #2fb220;
   --c-primary: #e20863;
   --c-txt: #2b2b2b;
+
+  --bgc-overlay: rgba(0, 0, 0, 0.5);
 
   --w-pc: 500px;
 }

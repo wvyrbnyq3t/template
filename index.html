@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/root.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/lib/upsell.css">
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0"
@@ -26,67 +27,20 @@
     />
   </head>
   <body>
-    <div id="upsell"></div>
+    <div id="upsell">
+      <div class="upsell-content is-active">
+        <button type="button" class="btn-icn btn-close btn-close-right"></button>
+        <div class="upsell-content-body">
+          <p class="title">通行規制について</p>
+        </div>
+      </div>
+    </div>
     <div class="page">
       <div class="page-content">
         <main>
-          <section>
-            <div class="card">
-              <button
-                type="button"
-                class="btn-icn btn-close btn-close-right btn-close-white"
-              ></button>
-              <div class="card-img">
-                <img
-                  src="https://plan.tokyodisneyresort.jp/on/demandware.static/Sites-CRS-Site/-/default/dwa0185fea/images/img_user_widget.png"
-                  alt=""
-                />
-              </div>
-              <div class="card-txt">
-                <p>ファンダフル・ディズニー・パスポート（対象日限定）</p>
-                <p class="fw-bold">そうた</p>
-                <p class="fw-bold">大人</p>
-                <p>2025.5.22</p>
-                <button type="button" class="btn-secondary btn-small w-100">名前変更</button>
-              </div>
-            </div>
-          </section>
-          <section>
-            <div class="card">
-              <button
-                type="button"
-                class="btn-icn btn-close btn-close-right btn-close-white"
-              ></button>
-              <div class="card-img">
-                <img
-                  src="https://media2.tokyodisneyresort.jp/home/topics/event/Groot/main.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="card-txt">
-                <p class="badge badge-small">期間限定</p>
-                <p class="title">イッツ・ア・スモール・ワールドwithグルート</p>
-              </div>
-            </div>
-          </section>
-          <section>
-            <h2 class="sec-title">ボタン</h2>
-            <button
-              type="button"
-              class="btn-secondary btn-icn btn-icn-arrow-right w-100"
-            >
-              詳細を見る
-            </button>
-          </section>
-          <section>
-            <h2 class="sec-title">スイッチ</h2>
-            <div class="switch-wrap">
-              <div class="switch-header"></div>
-              <div class="switch-body"></div>
-            </div>
-          </section>
         </main>
       </div>
     </div>
+    <script src="./assets/js/upsell.js" defer></script>
   </body>
 </html>
