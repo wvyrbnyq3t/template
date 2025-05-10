@@ -27,28 +27,58 @@
     />
   </head>
   <body>
-    <div id="modal" class="is-show">
+    <div id="modal">
       <div class="overlay"></div>
       <div class="modal-center">
-        <div class="modal-content is-active">
+        <div class="modal-content" data-modal="reachforthestars">
           <div class="modal-content-header">
-            <p class="fs-large fw-bold">新ナイトタイムエンターテイメント「Reach for the Stars」がついにスタート！</p>
-            <p class="badge badge-secondary badge-small">東京ディズニーランド</p>
+            <p class="fs-large fw-bold">
+              新ナイトタイムエンターテイメント「Reach for the
+              Stars」がついにスタート！
+            </p>
+            <p class="badge badge-secondary badge-small">
+              東京ディズニーランド
+            </p>
           </div>
           <div class="modal-content-body">
-            <img src="https://media2.tokyodisneyresort.jp/home/tdr/pickup/202405/newnightshow_2.jpg" alt="">
+            <img
+              src="https://media2.tokyodisneyresort.jp/home/tdr/pickup/202405/newnightshow_2.jpg"
+              alt=""
+            />
             <p>
               シンデレラ城を舞台にさまざまなキャラクターたちが夢を追い求めて空を翔ける姿を描くキャッスルプロジェクション。
             </p>
           </div>
           <div class="modal-content-footer">
-            <button type="button" class="btn-secondary w-100 btn-close-modal">閉じる</button>
+            <button type="button" class="btn-secondary w-100 btn-close-modal">
+              閉じる
+            </button>
           </div>
         </div>
       </div>
     </div>
     <div class="page">
       <div class="page-content">
+        <main>
+          <section>
+            <h2 class="sec-title">ピックアップ</h2>
+            <div class="card">
+              <img
+                src="https://media2.tokyodisneyresort.jp/home/tdr/pickup/202405/newnightshow_2.jpg"
+                alt=""
+              />
+              <div class="card-txt">
+                <p class="title">
+                  新ナイトタイムエンターテイメント「Reach for the Stars」
+                </p>
+                <p class="badge badge-small badge-secondary">
+                  東京ディズニーランド
+                </p>
+                <a href="" class="btn-secondary w-100 btn-open-modal" data-modal="reachforthestars">詳細を見る</a>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
     </div>
     <script src="./assets/js/modal.js" defer></script>
