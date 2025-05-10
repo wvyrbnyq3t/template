@@ -66,6 +66,11 @@ body {
   width: fit-content;
 }
 
+.badge-small {
+  font-size: 1.2rem;
+  padding: .25em 2em;
+}
+
 /* button style */
 .btn-primary {
   background-color: var(--c-primary);
