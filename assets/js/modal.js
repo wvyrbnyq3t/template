@@ -19,6 +19,7 @@ openBtns.forEach((btn) => {
     if (targetContent) {
       modal.classList.add("is-show");
       targetContent.classList.add("is-active");
+      document.body.classList.add("is-modal");
     }
   });
 });
@@ -40,6 +41,7 @@ overlay.addEventListener("click", () => {
     content.classList.remove("is-active");
   });
   modal.classList.remove("is-show");
+  document.body.classList.remove("is-modal");
 });
 
 let closeBtns = modal.querySelectorAll(".btn-close-modal");
@@ -52,6 +54,7 @@ closeBtns.forEach((btn) => {
 
     if (length === 0) {
       modal.classList.remove("is-show");
+      document.body.classList.remove("is-modal");
     }
   });
 });
