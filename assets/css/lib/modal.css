@@ -62,8 +62,9 @@
       z-index: 101;
 
       .modal-content-header {
-        display: grid;
-        gap: 0.8rem;
+        > *:not(:last-child) {
+          margin-bottom: 0.8rem;
+        }
       }
       .modal-content-body {
         display: grid;
