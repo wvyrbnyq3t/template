@@ -1,0 +1,114 @@
+:where(:root) {
+  --bgc-overlay: rgba(0, 0, 0, 0.5);
+  --bgc-page: #ffffff;
+
+  --c-gray: #cccccc;
+  --c-primary: #f4a466;
+  --c-text: #4e4e4e;
+
+  --c-blue: #0017c1;
+  --c-blue_light: #0065be;
+  --c-cyan: #008da6;
+  --c-green: #239d63;
+  --c-orange: #fb5b00;
+  --c-purple: #6e23d0;
+  --c-red: #eb0001;
+
+  --w-pc: 768px;
+
+  /* padding */
+  --gutter: 8px;
+}
+
+:root {
+  font-size: 10px;
+  touch-action: manipulation;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 1.7;
+  height: 100%;
+  width: 100%;
+  min-height: 100dvb;
+  position: relative;
+  z-index: 0;
+}
+
+/*
+  ====================
+  Layout
+  ====================
+*/
+.l-main__inner {
+  background-color: #ffffff;
+  height: 100%;
+  width: min(100%, var(--w-pc));
+  margin: 0 auto;
+  min-height: 100svh;
+  position: relative;
+  z-index: 0;
+}
+
+/*
+  ====================
+  Components
+  ====================
+*/
+/* Button */
+:where(.c-button) {
+  border: 0.1rem solid transparent;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 2em;
+  position: relative;
+
+  &:not([aria-disabled="true"]) {
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &[aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+}
+
+.c-button--primary {
+  background-color: var(--c-primary);
+  color: #ffffff;
+}
+.c-button--width-full {
+  width: 100%;
+}
+
+/* Container */
+.c-container__inner {
+  padding: 1.6rem 0;
+}
+.c-container__title {
+  border-left: 0.25em solid var(--c-primary);
+  padding: 0.25em 0 0.25em 0.5em;
+}
+
+/* Section */
+.c-section__inner {
+  padding: 2.4rem;
+}
+.c-section__title {
+  color: var(--c-primary);
+  font-weight: 700;
+}
+
+/*
+  ====================
+  Project
+  ====================
+*/
