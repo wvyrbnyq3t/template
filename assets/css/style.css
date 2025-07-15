@@ -72,9 +72,18 @@ body {
 
 /*
   ====================
-  Project
+  Utilities
   ====================
 */
+.u-list--disc li {
+  padding-inline-start: 1em;
+  position: relative;
+
+  &::before {
+    content: "・";
+    display: inline;
+  }
+}
 
 /*
   ====================
