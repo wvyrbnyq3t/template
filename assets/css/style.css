@@ -45,6 +45,7 @@ body {
 */
 .l-main__inner > :where(*) {
   inline-size: min(100%, var(--w-pc));
+  margin-inline: auto;
   padding: 2.4rem;
 }
 
@@ -53,21 +54,67 @@ body {
   Components
   ====================
 */
+/* Button */
+:where(.c-button) {
+  border: 0.1rem solid transparent;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: min(1em, 1.6rem) min(2em, 3.2rem);
+  position: relative;
+  width: fit-content;
+}
+.c-button--primary {
+  background-color: var(--c-primary);
+  color: #ffffff;
+}
+.c-button--secondary {
+  border-color: var(--c-primary);
+  color: var(--c-primary);
+}
+
+a.c-button:any-link {
+  position: relative;
+  &::after {
+    content: "open_in_new";
+
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.25em;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  }
+}
+
+.c-button--width-full {
+  width: 100%;
+}
+
 .c-page__title {
+  color: var(--c-primary);
   margin-block: 0;
 }
 
-.c-prose >:not(:where(:last-child)) {
+.c-prose > :not(:where(:last-child)) {
   margin-block-end: 0.75em;
 }
 .c-prose :where(h2) {
   margin-block-start: 2em;
 }
 .c-prose :where(h3) {
-  border-left: .25em solid var(--c-primary);
+  border-left: 0.25em solid var(--c-primary);
   margin-block-start: 2em;
-  padding-block: .25em;
-  padding-inline-start: .5em;
+  padding-block: 0.25em;
+  padding-inline-start: 0.5em;
 }
 
 /*
